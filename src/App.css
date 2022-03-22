@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-primary: hsl(220, 98%, 61%);
+  --Very-Dark-Blue: hsl(235, 21%, 11%);
+  --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+  --Check-Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+  --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+  --Very-Dark-Grayish-Blue2: hsl(237, 14%, 26%);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--Very-Dark-Blue);
+  position: relative;
+}
+.banner {
+  background-size: cover;
+  width: 100%;
+  height: 190px;
+}
+.title {
+  font-weight: 700;
+  color: white;
+  padding-top: 2rem;
+  padding-left: 1rem;
+}
+
+/* Create Todo styles */
+.container__create-todo {
+  width: 90%;
+  height: 3rem;
+  border-radius: 8px;
+  margin-left: 1rem;
+  margin-top: 3rem;
+  background-color: var(--Very-Dark-Desaturated-Blue);
+  display: flex;
+  align-items: center;
+}
+
+.input__create-todo {
+  font-size: 14px;
+  margin-left: 0.5rem;
+  flex: 1;
+  background-color: var(--Very-Dark-Desaturated-Blue);
+  border: none;
+  outline: none;
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+/* todo */
+.container__todo {
+  max-width: 90%;
+  height: 3rem;
+  overflow-y: scroll;
+  border-radius: 8px;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  background-color: var(--Very-Dark-Desaturated-Blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.check-todo {
+  margin-left: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: 2px solid var(--Very-Dark-Grayish-Blue2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checked {
+  background-color: rgba(144, 238, 144, 0.637);
+}
+.check {
+  visibility: visible;
+}
+.not-checked {
+  visibility: hidden;
+}
+
+.task-text {
+  margin-left: 0.5rem;
+  color: var(--Dark-Grayish-Blue);
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+/* todo list */
+
+.todo-list {
+  width: 100%;
+  top: 21vh;
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+
+/* filter list */
+.filter-list {
+  position: absolute;
+  bottom: 8vh;
+  width: 90%;
+  height: 3rem;
+  border-radius: 8px;
+  margin-left: 1rem;
+  margin-top: 3rem;
+  background-color: var(--Very-Dark-Desaturated-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filter-list h4 {
+  font-size: 14px;
+  margin-left: 0.5rem;
+  color: var(--Dark-Grayish-Blue);
+}
+.filter-list h4:active {
+  font-size: 14px;
+  margin-left: 0.5rem;
+  color: var(--color-primary);
+}
